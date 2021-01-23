@@ -1,10 +1,7 @@
 const cityForm = document.querySelector("#weatherForm");
 
 const getWeatherConditions = async (city) => {
-  // await fetch(`http://api.weatherstack.com/current?access_key=<your_access_key>&query=${city}`)
-  await fetch(
-    `http://api.weatherstack.com/current?access_key=5cfd1dd0c5b534b4b61d30a8aa8f14e9&query=${city}`
-  )
+  await fetch(`http://api.weatherstack.com/current?access_key=<your_access_key>&query=${city}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
